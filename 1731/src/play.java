@@ -8,7 +8,8 @@ class play extends JFrame implements ActionListener{
 	private static final long serialVersionUID = 1L;
 JButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,sample,starB;  
 Icon star;  
-Icon ic0=new ImageIcon("images/blank.jpg");  
+Icon ic0=new ImageIcon("images/blank.jpg");
+Icon ic10=new ImageIcon("images/finger.png");
 
 Icon samicon1=new ImageIcon("images/pic1.jpeg");  
 Icon samicon2=new ImageIcon("images/pic2.jpg");  
@@ -71,12 +72,17 @@ sample.setBounds(650,100,200,200);
   
 JLabel lab1=new JLabel("Welcome to Picture Puzzle!!");  
 lab1.setBounds(5,15,500,20);  
+lab1.setForeground(Color.blue);
+Font font = new Font("Humnst777 Blk BT", Font.BOLD,24);
+lab1.setFont(font);
 JLabel lab2=new JLabel("Original:");  
 lab2.setBounds(650,50,200,20);  
-lab2.setForeground(Color.red);  
-JLabel lab3=new JLabel("Click on Original picture to change.");  
-lab3.setBounds(650,350,500,20);  
   
+JLabel lab3=new JLabel("Click on Original picture to change.");  
+lab3.setBounds(650,400,500,20);
+JLabel lab4=new JLabel(ic10);  
+lab4.setBounds(725,320,50,82);
+
 star=btn9.getIcon();  
   
 add(btn1);
@@ -92,6 +98,7 @@ add(sample);
 add(lab1);
 add(lab2);
 add(lab3);
+add(lab4);
 
  btn1.addActionListener(this);
  btn2.addActionListener(this);  
@@ -120,7 +127,7 @@ if(e.getSource()==btn1){
                     btn4.setIcon(s1);  
                     btn1.setIcon(star);  
                    }  
-  }//end of if  
+  } 
   
 if(e.getSource()==btn2){  
     Icon s1=btn2.getIcon();  
@@ -135,7 +142,7 @@ if(e.getSource()==btn2){
                     btn3.setIcon(s1);  
                     btn2.setIcon(star);  
                    }  
-  }//end of if  
+  } 
   
 if(e.getSource()==btn3){  
     Icon s1=btn3.getIcon();  
@@ -146,7 +153,7 @@ if(e.getSource()==btn3){
                     btn6.setIcon(s1);  
                     btn3.setIcon(star);  
                    }  
-  }//end of if  
+  }  
   
 if(e.getSource()==btn4){  
     Icon s1=btn4.getIcon();  
@@ -161,7 +168,7 @@ if(e.getSource()==btn4){
                     btn7.setIcon(s1);  
                     btn4.setIcon(star);  
                    }  
-  }//end of if  
+  }  
   
 if(e.getSource()==btn5){  
     Icon s1=btn5.getIcon();  
@@ -180,7 +187,7 @@ if(e.getSource()==btn5){
                     btn8.setIcon(s1);  
                     btn5.setIcon(star);  
                    }  
-  }//end of if  
+  }  
   
 if(e.getSource()==btn6){  
     Icon s1=btn6.getIcon();  
@@ -195,7 +202,7 @@ if(e.getSource()==btn6){
                     btn9.setIcon(s1);  
                     btn6.setIcon(star);  
                    }  
-}//end of if  
+}  
   
 if(e.getSource()==btn7){  
     Icon s1=btn7.getIcon();  
@@ -206,7 +213,7 @@ if(e.getSource()==btn7){
                     btn8.setIcon(s1);  
                     btn7.setIcon(star);  
                    }  
- }//end of if  
+ }  
   
    if(e.getSource()==btn8){  
     Icon s1=btn8.getIcon();  
@@ -222,7 +229,7 @@ if(e.getSource()==btn7){
                     btn8.setIcon(star);  
                    }  
   
-  }//end of if  
+  } 
   
  if(e.getSource()==btn9){  
     Icon s1=btn9.getIcon();  
@@ -233,7 +240,7 @@ if(e.getSource()==btn7){
                     btn6.setIcon(s1);  
                     btn9.setIcon(star);  
                    }  
-  }//end of if  
+  }  
   
 if(e.getSource()==sample){  
 Icon s1=sample.getIcon();  
@@ -250,7 +257,7 @@ btn8.setIcon(ic8);
 btn9.setIcon(ic9);  
 star=btn9.getIcon();  
 starB.setIcon(ic0);  
-}//eof if  
+} 
 else if(s1==samicon1){  
 sample.setIcon(samicon2);  
 btn1.setIcon(ic11);  
@@ -264,7 +271,7 @@ btn8.setIcon(ic18);
 btn9.setIcon(ic19);  
 star=btn6.getIcon();  
   
-}//eof else  
+}  
 else{  
 sample.setIcon(samicon3);  
 btn1.setIcon(ic21);  
@@ -278,12 +285,12 @@ btn8.setIcon(ic28);
 btn9.setIcon(ic29);  
 star=btn6.getIcon();  
 
-}//end of else  
+} 
   
 }  
-}//end of actionPerformed  
+}  
   
 public static void main(String args[]){  
 new play();  
-}//end of main  
-}//end of class 
+} 
+}
